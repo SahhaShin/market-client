@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  height: 1024px;
+  height: 1024%;
   width: 100%;
   margin: 0;
   padding: 0;
@@ -28,7 +28,7 @@ body {
 
 #body {
   width: 1024px;
-  height: 100%;
+  height: 1024vh;
   margin: 0 auto;
   padding-bottom: 24px;
 }
@@ -86,4 +86,9 @@ body {
 #footer {
   height: 200px;
   background-color: rgb(230, 230, 230);
+}
+
+.product-link{
+  color:inherit;
+  text-decoration: none;
 }
