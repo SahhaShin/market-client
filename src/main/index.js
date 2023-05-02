@@ -19,17 +19,12 @@ function MainPage(){
     console.error('에러 발생 : ', error);
   });
   }, []);
+  console.log(products);
   
   // 복수개의 div 등의 태그들을 리턴할 수 없다.
   //때문에 1개의 div로 씌워줘야 한다.
   return (
     <div>
-      <div id="header">
-        <div id="header-area">
-          <img src="images/icons/logo.png" />
-        </div>
-      </div>
-      <div id="body">
         <div id="banner">
           <img src="/images/banners/banner1.png" />
         </div>
@@ -42,7 +37,7 @@ function MainPage(){
               return(
                 <div className="product-card">
                   
-                  <Link className="product-link" to={`/products/${index}`}>
+                  <Link className="product-link" to={`/products/${product.id}`}>
                     <div>
                       <img className="product-img" src={product.imageUrl}></img>
                     </div>
@@ -59,12 +54,8 @@ function MainPage(){
               );
             })
           }
-          
-            
-          
+
         </div>
-      </div>
-      <div id="footer"></div>
     </div>
   );
 }
