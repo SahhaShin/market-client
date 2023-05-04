@@ -11,7 +11,7 @@ function MainPage(){
   React.useEffect(function(){
     //이전 프로젝트에서 각자 만든 mock서버를 가져온다.
   //프로미스 함수이기 때문에 결과가 프로미스 객체로 온다 때문에 then을 꼭 써줘야한다.
-  axios.get("https://1771c96e-64d6-4579-9e75-e3aee90caeb9.mock.pstmn.io/products")
+  axios.get("http://localhost:8080/products")
   .then(function(result){
     const products = result.data.products;
     setProducts(products);//여기가 불리면 네트워크 통신이 다시 일어나서 렌더링 반복 때문에 이를 방지하기 위해 useEffect를 써준다.

@@ -8,7 +8,7 @@ function ProductPage(){
 
     // useEffect로 딱 한번만 불리게 써줘야한다. 안써주면 렌더링을 할 때마다 네트워크 요청이 계속 간다.
     useEffect(function(){
-        axios.get(`https://555c86aa-1f96-49fb-8ae1-6aa9b71cc076.mock.pstmn.io/products/${id}`).then(
+        axios.get(`https://localhost:8080/products/${id}`).then(
             function(result){
                 setProducts(result.data);
                 console.log(result);
